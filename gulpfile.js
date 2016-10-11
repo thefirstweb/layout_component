@@ -15,11 +15,11 @@ const gulp = require('gulp'),
 gulp.task('default', function () {
 
     var options = {};
-    watch('.component/*.css', options, function (e) {
+    watch('./component/*.css', options, function (e) {
         // console.log('e:'+JSON.stringify(e));
         console.log(new Date() + ' -- ' + e.history[0].replace(e.base, ''));
         // console.log('\n');
-        gulp.src('.component/*.css')
+        gulp.src('./component/*.css')
         .pipe(concat('component.css' , {newLine: '\n'}))
         .pipe(postcss(processors))
         .pipe(cssnano())

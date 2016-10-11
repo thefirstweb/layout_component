@@ -61,17 +61,17 @@
     border-color: var(--theme-feebee);
 }
 
-.theme_cell_phone_border .product:before,
+.theme_cell_phone_border .product,
 .theme_cell_phone_border .mod_price_comparison_list .container_bottom {
     border-color: var(--theme-cell-phone);
 }
 
-.theme_appliances_border .product:before,
+.theme_appliances_border .product,
 .theme_appliances_border .mod_price_comparison_list .container_bottom {
     border-color: var(--theme-appliances);
 }
 
-.theme_camera_border .product:before,
+.theme_camera_border .product,
 .theme_camera_border .mod_price_comparison_list .container_bottom {
     border-color: var(--theme-camera);
 }

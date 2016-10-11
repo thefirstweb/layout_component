@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>component</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" lazyload>
+<link rel="stylesheet" href="reset.css" lazyload>
+<link rel="stylesheet" href="tool.css" lazyload>
+<link rel="stylesheet" href="build/component.css" lazyload>
+<style>
+body {
+    background: #f3f3f3;
+}
+h2 {
+    font-size: 2em;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+</head>
+<body>
+<h2>mod_price_comparison</h2>
+<ul id="app_1" class="mod_grid_layout mod_price_comparison pure-g">
+    <li class="mod_price_comparison_list pure-u" data-ga="" data-store="" data-url="" v-for="items in d">
+        <div class="product">
+            <a class="link_ghost" rel="nofollow" v-bind:href="items.url" target="_blank">
+                <div class="img_container">
+                    <img v-bind:src="items.img" alt="" class="">
+                </div>
+                <div class="container">
+                    <h4 class="normal">{{items.title}}</h4>
+                </div>
+            </a>
+            <div class="container_bottom">
+                <ol>
+                    <li class="mod_price_comparison_items pure-g" v-for="products in items.price_comparison">
+                        <a v-bind:href="products.url" target="_blank">
+                            <span class="pure-u-1-2 ellipsis small shop">
+                                {{products.shop}}
+                            </span>
+                            <span class="pure-u-1-2 ellipsis price large">
+                                {{products.price}}
+                            </span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </li>
+</ul>
+<h2>mod_price_comparison(theme_cell_phone_border)</h2>
+<ul id="app_2" class="mod_grid_layout mod_price_comparison pure-g theme_cell_phone_border">
+    <li class="mod_price_comparison_list pure-u" data-ga="" data-store="" data-url="" v-for="items in d">
+        <div class="product">
+            <a class="link_ghost" rel="nofollow" v-bind:href="items.url" target="_blank">
+                <div class="img_container">
+                    <img v-bind:src="items.img" alt="" class="">
+                </div>
+                <div class="container">
+                    <h4 class="normal">{{items.title}}</h4>
+                </div>
+            </a>
+            <div class="container_bottom">
+                <ol>
+                    <li class="mod_price_comparison_items pure-g" v-for="products in items.price_comparison">
+                        <a v-bind:href="products.url" target="_blank">
+                            <span class="pure-u-1-2 ellipsis small shop">
+                                {{products.shop}}
+                            </span>
+                            <span class="pure-u-1-2 ellipsis price large">
+                                {{products.price}}
+                            </span>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </li>
+</ul>
+<h2>mod_product</h2>
+<h2>mod_product(Divider)</h2>
+<h2>mod_product(close btn) (grid_shadow)</h2>
+<h2>mod_product(rank flag) (grid_shadow)</h2>
+<h2>mod_product(rank flag) (grid_shadow)(theme_cell_phone_flag)</h2>
+<h2>mod_product(grid_shadow)</h2>
+<h2>mod_product(grid_shadow) (price range)</h2>
+<h2>mod_product(grid_shadow) (price range with desc)</h2>
+<h2>mod_promotion</h2>
+<h2>mod_promotion_list</h2>
+<h2>mod_promotion_list(divider)</h2>
+<h2>mod_promotion(divider)</h2>
+<h2>mod_promotion_large</h2>
+<h2>mod_promotion_large(divider left)</h2>
+<h2>mod_promotion_large(divider right)</h2>
+<h2>mod_groupon</h2>
+</body>
+<script src="mod_price_comparison.js"></script>
+<script>
+var app_1 = new Vue({
+    el: '#app_1',
+    data: {
+        d: mod_price_comparison
+    }
+});
+var app_2 = new Vue({
+    el: '#app_2',
+    data: {
+        d: mod_price_comparison
+    }
+});
+</script>
+</html>
