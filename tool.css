@@ -1,0 +1,9 @@
+*:hover,
+* *:hover,
+* * *:hover,
+* * * *:hover,
+* * * * *:hover,
+* * * * * *:hover,
+* * * * * * *:hover {
+    outline: solid 2px #00a1cd;
+}

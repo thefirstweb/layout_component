@@ -1,0 +1,100 @@
+:root {
+    --content-width: 1260px;
+    --flag-bg-color: #fff100;
+    --flag-fg-color: #f7e31b;
+    --flag-bg-width: 28px;
+    --flag-fg-width: 24px;
+    --grid-img-width: 150px;
+    --grid-border-width: 4px;
+    --gird-divider: solid 1px #dcdcdc;
+    --grid-product-width: calc(200px + 3px*2);
+    --grid-price-comparison-width: calc(230px + var(--grid-border-width)*2 + 6px*2);
+    --price-color: #ef4141;
+    --product-title-color: #1f1f1f;
+    --product-shop-color: #7f7f7f;
+    --product-buy-btn-width: 56px;
+    --theme-feebee: #ffe400;
+    --theme-d4: #5c5c5c;
+    --theme-d4-bg: #d4e1ee;
+    --theme-cell-phone: #0090d4;
+    --theme-cell-phone-bg: #d4e1ee;
+    --theme-appliances: #bdc423;
+    --theme-appliances-bg: #edeed4;
+    --theme-camera: #55728d;
+    --theme-camera-bg: #aac1d7;
+    --container-layout: {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: var(--content-width);
+        box-sizing: border-box;
+    };
+}
+
+body {
+    font-family: Microsoft JhengHei, calibri, arial, helvetica, monospace, clean, sans-serif;
+    background: #f3f3f3;
+    font-size: 16px;
+}
+
+img {
+    object-fit: contain;
+}
+
+a {
+    color: #1488bb;
+    text-decoration: none;
+}
+a:hover {
+    /* text-decoration: underline; */
+}
+.clearfix:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both;
+}
+.vertical_middle:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+.hide {
+    display: none !important;
+}
+.xlarge {
+    font-size: 24px;
+}
+.large {
+    font-size: 20px;
+}
+.small {
+    font-size: 14px;
+}
+.xsmall {
+    font-size: 12px;
+}
+.ellipsis {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container_layout_center {
+    @apply --container-layout;
+}
+
+.sub_title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -.1em;
+}
+
+.shelves,
+.price {
+    color: var(--price-color);
+    vertical-align: middle;
+    font-family: Verdana;
+    word-break: break-all;
+}

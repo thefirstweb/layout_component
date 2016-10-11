@@ -1,0 +1,77 @@
+.mod_price_comparison .mod_price_comparison_list {
+    width: var(--grid-price-comparison-width);
+    padding: 6px;
+}
+.mod_price_comparison .mod_price_comparison_list a {
+    height: auto;
+}
+.mod_price_comparison .product {
+    background: #fff;
+    border-style: solid;
+    border-width: var(--grid-border-width);
+}
+
+.mod_price_comparison .mod_price_comparison_list .img_container {
+    padding-top: 10px;
+    padding-top: calc(10px + var(--grid-border-width));
+}
+.mod_price_comparison .mod_price_comparison_list h4 {
+    margin: 10px 12px;
+    margin: 10px calc(8px + var(--grid-border-width));
+}
+.mod_price_comparison .mod_price_comparison_list .container_bottom {
+    border-top: solid 2px;
+    padding: 10px 12px 0 12px;
+    padding: 10px calc(8px + var(--grid-border-width)) 0 calc(8px + var(--grid-border-width));
+}
+
+.mod_price_comparison .mod_price_comparison_list ol {
+    counter-reset: li;
+}
+.mod_price_comparison .mod_price_comparison_list .shop {
+    vertical-align: bottom;
+}
+.mod_price_comparison .mod_price_comparison_list .price {
+    text-align: right;
+}
+.mod_price_comparison .mod_price_comparison_list .mod_price_comparison_items {
+    counter-increment: products;
+    padding-left: 1.5em;
+    margin-bottom: 10px;
+}
+.mod_price_comparison .mod_price_comparison_list .mod_price_comparison_items:before {
+    content: counter(products, decimal);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    color: #fff;
+    background: #464646;
+    margin-top: -.6em;
+    box-sizing: border-box;
+    padding-left: .3em;
+    padding-top: .2em;
+}
+
+/* border theme */
+.mod_price_comparison .product,
+.mod_price_comparison .mod_price_comparison_list .container_bottom {
+    border-color: var(--theme-feebee);
+}
+
+.theme_cell_phone_border .product:before,
+.theme_cell_phone_border .mod_price_comparison_list .container_bottom {
+    border-color: var(--theme-cell-phone);
+}
+
+.theme_appliances_border .product:before,
+.theme_appliances_border .mod_price_comparison_list .container_bottom {
+    border-color: var(--theme-appliances);
+}
+
+.theme_camera_border .product:before,
+.theme_camera_border .mod_price_comparison_list .container_bottom {
+    border-color: var(--theme-camera);
+}
