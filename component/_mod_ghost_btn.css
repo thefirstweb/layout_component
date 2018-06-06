@@ -1,0 +1,15 @@
+.mod_ghost_btn button {
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: transparent;
+    color: #212121;
+    border: 1.5px solid #838383;
+    border-radius: 2px;
+    padding: 10px 10px;
+    margin-bottom: 8px;
+  }
+  
+  .mod_ghost_btn button:hover {
+    color: #010101;
+    background-color: #dbf2ff;
+  }
