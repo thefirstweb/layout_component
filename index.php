@@ -90,6 +90,8 @@ $data = [
     ],
 ];
 
+$ghost_btn_data = array('景美','大橋頭','流星花園','爆掉的按鈕爆掉的按鈕爆掉的按鈕爆掉的按鈕爆掉的按鈕','新莊','五股','蕩來蕩去的泰山');
+
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +101,7 @@ $data = [
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title></title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
-<link rel="stylesheet" href="build/style.css">
+<link rel="stylesheet" href="build/component.css">
 
 <style>
 
@@ -806,5 +808,14 @@ foreach ($data as $key) {
 }
 ?>
 </ul>
+
+<h2>mod_ghost_btn</h2>
+<div class="mod_ghost_btn">
+    <?php for($i = 0; $i < count($ghost_btn_data); $i++) { ?>
+    <button><?php echo $ghost_btn_data[$i]; ?></button>
+    <?php } ?>
+</div>
+
+
 </body>
 </html>
