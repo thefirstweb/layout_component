@@ -1,0 +1,81 @@
+.ellipsis {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mod_prd_layout {
+  width: 1080px;
+  margin: auto;
+}
+
+.mod_prd_layout li {
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+.mod_prd_layout li a {
+  display: block;
+  padding-bottom: 13px;
+  border: 1px solid #aaa;
+  text-decoration: none;
+}
+
+.mod_prd_layout .mod_prd_pic {
+  display: block;
+  margin: 10px 10px 0 10px;
+  width: 240px;
+  height: 160px;
+}
+
+.mod_prd_layout .mod_prd_name {
+  display: block;
+  word-break: break-all;
+  padding: 13px 10px 0 13px;
+  font-size: 16px;
+  line-height: 1.4rem;
+  height: 2.8rem;
+  overflow: hidden;
+}
+
+.mod_prd_layout .mod_prd_info {
+  padding: 8px 10px 0 13px;
+}
+
+.mod_prd_info div {
+  box-sizing: border-box;
+  /* border: 1px solid #aaa; */
+}
+
+.mod_prd_info span {
+  display: block;
+}
+
+.mod_prd_info div:nth-child(2) {
+  text-align: right;
+  padding: 10px 8px 0 0;
+}
+
+/* 我的最愛的icon */
+
+.mod_prd_info div:nth-child(2) span {
+  font-size: 20px;
+}
+
+/* 評等icon */
+
+.mod_prd_info div:first-child span:first-child {
+  font-size: 12px;
+  height: 1rem;
+  /* height: 1.3rem; */
+}
+
+/* 地區icon */
+
+.mod_prd_info div:first-child span:nth-child(2) {
+  font-size: 14px;
+  line-height: 1.3rem;
+  height: 1.3rem;
+  overflow: hidden;
+}

@@ -1,112 +1,298 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>component</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" lazyload>
-<link rel="stylesheet" href="reset.css" lazyload>
-<link rel="stylesheet" href="tool.css" lazyload>
-<link rel="stylesheet" href="build/component.css" lazyload>
-<style>
-body {
-    background: #f3f3f3;
-}
-h2 {
-    font-size: 2em;
-}
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>component</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css" lazyload>
+    <link rel="stylesheet" href="reset.css" lazyload>
+    <link rel="stylesheet" href="tool.css" lazyload>
+    <link rel="stylesheet" href="build/component.css" lazyload>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-min.css">
+    <link rel="stylesheet" href="component/feebeego_component.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background: #f3f3f3;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.js"></script>
 </head>
+
 <body>
-<h2>mod_price_comparison</h2>
-<ul id="app_1" class="mod_grid_layout mod_price_comparison pure-g">
-    <li class="mod_price_comparison_list pure-u" data-ga="" data-store="" data-url="" v-for="items in d">
-        <div class="product">
-            <a class="link_ghost" rel="nofollow" v-bind:href="items.url" target="_blank">
-                <div class="img_container">
-                    <img v-bind:src="items.img" alt="" class="">
+    <h2>mod_price_comparison</h2>
+    <ul id="app_1" class="mod_grid_layout mod_price_comparison pure-g">
+        <li class="mod_price_comparison_list pure-u" data-ga="" data-store="" data-url="" v-for="items in d">
+            <div class="product">
+                <a class="link_ghost" rel="nofollow" v-bind:href="items.url" target="_blank">
+                    <div class="img_container">
+                        <img v-bind:src="items.img" alt="" class="">
+                    </div>
+                    <div class="container">
+                        <h4 class="normal">{{items.title}}</h4>
+                    </div>
+                </a>
+                <div class="container_bottom">
+                    <ol>
+                        <li class="mod_price_comparison_items pure-g" v-for="products in items.price_comparison">
+                            <a v-bind:href="products.url" target="_blank">
+                                <span class="pure-u-1-2 ellipsis small shop">
+                                    {{products.shop}}
+                                </span>
+                                <span class="pure-u-1-2 ellipsis price large">
+                                    {{products.price}}
+                                </span>
+                            </a>
+                        </li>
+                    </ol>
                 </div>
-                <div class="container">
-                    <h4 class="normal">{{items.title}}</h4>
-                </div>
-            </a>
-            <div class="container_bottom">
-                <ol>
-                    <li class="mod_price_comparison_items pure-g" v-for="products in items.price_comparison">
-                        <a v-bind:href="products.url" target="_blank">
-                            <span class="pure-u-1-2 ellipsis small shop">
-                                {{products.shop}}
-                            </span>
-                            <span class="pure-u-1-2 ellipsis price large">
-                                {{products.price}}
-                            </span>
-                        </a>
-                    </li>
-                </ol>
             </div>
-        </div>
-    </li>
-</ul>
-<h2>mod_price_comparison(theme_cell_phone_border)</h2>
-<ul id="app_2" class="mod_grid_layout mod_price_comparison pure-g theme_cell_phone_border">
-    <li class="mod_price_comparison_list pure-u" data-ga="" data-store="" data-url="" v-for="items in d">
-        <div class="product">
-            <a class="link_ghost" rel="nofollow" v-bind:href="items.url" target="_blank">
-                <div class="img_container">
-                    <img v-bind:src="items.img" alt="" class="">
+        </li>
+    </ul>
+    <h2>mod_price_comparison(theme_cell_phone_border)</h2>
+    <ul id="app_2" class="mod_grid_layout mod_price_comparison pure-g theme_cell_phone_border">
+        <li class="mod_price_comparison_list pure-u" data-ga="" data-store="" data-url="" v-for="items in d">
+            <div class="product">
+                <a class="link_ghost" rel="nofollow" v-bind:href="items.url" target="_blank">
+                    <div class="img_container">
+                        <img v-bind:src="items.img" alt="" class="">
+                    </div>
+                    <div class="container">
+                        <h4 class="normal">{{items.title}}</h4>
+                    </div>
+                </a>
+                <div class="container_bottom">
+                    <ol>
+                        <li class="mod_price_comparison_items pure-g" v-for="products in items.price_comparison">
+                            <a v-bind:href="products.url" target="_blank">
+                                <span class="pure-u-1-2 ellipsis small shop">
+                                    {{products.shop}}
+                                </span>
+                                <span class="pure-u-1-2 ellipsis price large">
+                                    {{products.price}}
+                                </span>
+                            </a>
+                        </li>
+                    </ol>
                 </div>
-                <div class="container">
-                    <h4 class="normal">{{items.title}}</h4>
-                </div>
-            </a>
-            <div class="container_bottom">
-                <ol>
-                    <li class="mod_price_comparison_items pure-g" v-for="products in items.price_comparison">
-                        <a v-bind:href="products.url" target="_blank">
-                            <span class="pure-u-1-2 ellipsis small shop">
-                                {{products.shop}}
-                            </span>
-                            <span class="pure-u-1-2 ellipsis price large">
-                                {{products.price}}
-                            </span>
-                        </a>
-                    </li>
-                </ol>
             </div>
-        </div>
-    </li>
-</ul>
-<h2>mod_product</h2>
-<h2>mod_product(Divider)</h2>
-<h2>mod_product(close btn) (grid_shadow)</h2>
-<h2>mod_product(rank flag) (grid_shadow)</h2>
-<h2>mod_product(rank flag) (grid_shadow)(theme_cell_phone_flag)</h2>
-<h2>mod_product(grid_shadow)</h2>
-<h2>mod_product(grid_shadow) (price range)</h2>
-<h2>mod_product(grid_shadow) (price range with desc)</h2>
-<h2>mod_promotion</h2>
-<h2>mod_promotion_list</h2>
-<h2>mod_promotion_list(divider)</h2>
-<h2>mod_promotion(divider)</h2>
-<h2>mod_promotion_large</h2>
-<h2>mod_promotion_large(divider left)</h2>
-<h2>mod_promotion_large(divider right)</h2>
-<h2>mod_groupon</h2>
+        </li>
+    </ul>
+    <h2>mod_product</h2>
+    <h2>mod_product(Divider)</h2>
+    <h2>mod_product(close btn) (grid_shadow)</h2>
+    <h2>mod_product(rank flag) (grid_shadow)</h2>
+    <h2>mod_product(rank flag) (grid_shadow)(theme_cell_phone_flag)</h2>
+    <h2>mod_product(grid_shadow)</h2>
+    <h2>mod_product(grid_shadow) (price range)</h2>
+    <h2>mod_product(grid_shadow) (price range with desc)</h2>
+    <h2>mod_promotion</h2>
+    <h2>mod_promotion_list</h2>
+    <h2>mod_promotion_list(divider)</h2>
+    <h2>mod_promotion(divider)</h2>
+    <h2>mod_promotion_large</h2>
+    <h2>mod_promotion_large(divider left)</h2>
+    <h2>mod_promotion_large(divider right)</h2>
+    <h2>mod_groupon</h2>
+    <div>
+        <ul class="mod_prd_layout pure-g">
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name">
+                        廣島三井花園飯店 Mitsui Garden Hotel Hiroshima
+                    </h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="ellipsis">廣島市,日本</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name">廣島三井花園飯店
+                    </h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="ellipsis">廣島市,日本廣島市,日本廣島市,日本廣島市,日本廣島市,日本</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name">廣島三井花園飯店 Mitsui Garden Hotel Hiroshima</h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+
+                            </span>
+                            <span class="ellipsis">廣島市,日本</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name">sssssssss yyyyyyyyyyyyyyyyyyyyyy ppppppppppppppppppp</h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="ellipsis">廣島市,日本</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name"> Lorem ipsum dolor sit amet consectetur adipisicingMolestiae suscipit maiores earum eius ab at, dolore
+                        voluptate atque sit asperiores!</h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="ellipsis">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates, hic.</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name">Lorem ipsum dolorsitamet. Lorem ipsum dolor sit amet. </h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="ellipsis">廣島市,日本</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name">btnyumnybvteynuybvtrbnyuvtrtnyubtvrebnbyntnbvtrtbnyb</h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="ellipsis">廣島市,日本</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="pure-u-1-4">
+                <a href="#" class="mod_prd_item">
+                    <img src="https://api.fnkr.net/testimg/240x160/00CED1/FFF/?text=img+placeholder" class="mod_prd_pic">
+                    <h4 class="mod_prd_name">廣島三井花園廣島三井花園廣島三井花園廣島三井花園廣島三井花園飯店 Mitsui Garden Hotel Hiroshima</h4>
+                    <div class="mod_prd_info pure-g">
+                        <div class="pure-u-2-3">
+                            <span>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </span>
+                            <span class="ellipsis">廣島市,日本</span>
+                        </div>
+                        <div class="pure-u-1-3">
+                            <span>
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
 </body>
 <script src="mod_price_comparison.js"></script>
 <script>
-var app_1 = new Vue({
-    el: '#app_1',
-    data: {
-        d: mod_price_comparison
-    }
-});
-var app_2 = new Vue({
-    el: '#app_2',
-    data: {
-        d: mod_price_comparison
-    }
-});
+    var app_1 = new Vue({
+        el: '#app_1',
+        data: {
+            d: mod_price_comparison
+        }
+    });
+    var app_2 = new Vue({
+        el: '#app_2',
+        data: {
+            d: mod_price_comparison
+        }
+    });
 </script>
+
 </html>
